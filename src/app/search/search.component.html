@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-8">
+      <div class="card">
+          <div class="card-header">
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search... (Address, City or State)" aria-label="Search" style="width: 40%;" #search>
+              <select id="selectItem" class="custom-select" style="margin-right: .5rem;">
+                <option value="restaurant" selected>Restaurants</option>
+                <option value="bank">Banks</option>
+                <option value="gym">Gyms</option>
+                <option value="supermarket">Supermarkets</option>
+                <option value="store">All Stores</option>
+              </select>
+              <button (click)="updateMap();" type="button" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+            </form>
+          </div>
+          <div id="map">
+            <h3 id="mapHeader">Start Searching!</h3>
+          </div>
+          <app-list-results [resultsArray]='resultsArray' [service]='service'></app-list-results>
+        </div>
+  </div>
+  <div class="col-md-4">
+    <app-user-list></app-user-list>
+  </div>
+</div>
+

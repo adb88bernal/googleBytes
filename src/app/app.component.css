@@ -1,0 +1,12 @@
+.jumbotron{
+    background-color: #3AAFA9;
+}
+
+
+#title{
+    text-align: center;
+    font-weight: 300;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 5.5rem;
+}

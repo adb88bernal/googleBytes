@@ -1,0 +1,19 @@
+#title_sub{
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+
+.card{
+    background-color: #17252A;
+    color: white;
+}
+
+
+.list-group-item{
+    padding-bottom: .5rem;
+}
+
+#mainRow{
+    margin-bottom: 10rem;
+}

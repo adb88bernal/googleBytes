@@ -1,0 +1,28 @@
+<div class="card sticky-top ">
+  <div class="card-header">
+    <h3 style=" text-align: center; font-weight: 300;">My List SnapShot</h3>
+  </div>
+
+  <div class="card-body " style="padding-bottom: 1rem;" droppable (onDrop)="saveItem($event)" [dragOverClass]="'drag-target-border'" >
+    <div id="initalHeader">
+      <h3 id="header">Save Items Here</h3>
+    </div>
+    <div class="card-body" *ngFor="let item of resultsArray; let i = index;">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-md-8">
+              <h5 style="font-weight: 300;">{{item.name}} <i>({{item.types[0]}})</i></h5>
+              <h5 style="font-weight: 300;">{{item.address_components[3].short_name}}, {{item.address_components[4].short_name}}</h5>
+              <p style="font-weight: 200; font-size: .8rem;">{{item.vicinity}}</p>
+            </div>
+            <div class="col-md-4">
+              <button (click)="onDeleteItem(i)" class="btn btn-danger btn-lg">Delete</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>

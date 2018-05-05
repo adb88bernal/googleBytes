@@ -1,0 +1,33 @@
+.list-group-item{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    border: 1px solid #c9c9c9;
+    border-radius: 6px;
+}
+
+.list-group-item:hover{
+    cursor: pointer;
+}
+
+.active{
+    color: green;
+    border: dashed green 1px;
+    transform: scaleX(.5)
+}
+.change{
+    opacity: .5;
+    cursor: pointer;
+}
+
+#placeName{
+    font-weight: 300;
+}
+
+#address{
+    font-weight: 200;
+}
+
+p{
+    margin-bottom: .2rem;
+    font-weight: 200;
+}

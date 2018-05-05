@@ -1,0 +1,20 @@
+
+<div class="card-body">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let result of resultsArray; let i = index;" draggable [dragData]="result">
+          <div class="row" >
+            <div class="col-md-5">
+              <h3 id="placeName">{{result.name}} </h3>
+              <h4 id="address">{{result.formatted_address}}</h4>
+            </div>
+            <div class="col-md-7">
+              <p><b>Google Rating:</b> {{result.rating}}</p>
+              <p><b>Price Level:</b> {{result.price_level}}</p>
+              <p><b>Phone Number:</b> {{result.formatted_phone_number}}</p>
+              <a role="button" class="btn btn-primary btn-sm" target="_blank" href={{result.website}}>Visit Website</a>
+              <a role="button" class="btn btn-info btn-sm" target="_blank" href={{result.url}}>Google Maps</a>
+            </div>
+          </div>
+        </li>
+    </ul>  
+</div>

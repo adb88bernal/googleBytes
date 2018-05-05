@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-7" id="infoCard" >
+        <div class="card" *ngFor="let item of fullDetails">
+            <div class="card-body">
+              <div class="row">
+                  <div class="col-md-9" style="margin-right: 0;">
+                      <h3 class="card-title">{{item.name}}</h3>
+                      <p><b>Google Rating:</b> <i>{{item.rating}}</i></p>
+                      <p><b>Phone Number:</b> <i>{{item.phone}}</i></p>
+                      <p><b>Address:</b> <i>{{item.address}}</i></p>
+                      <p><b>Categories:</b></p>
+                        <ul style="margin-bottom: 0">
+                          <li><i>{{item.categories[0]}}</i></li>
+                          <li><i>{{item.categories[1]}}</i></li>
+                        </ul>
+                      <p><b>Hours:</b></p>
+                        <ul style="margin-bottom: 0">
+                          <li><i>{{item.hours.weekday_text[6]}}</i></li>
+                          <li><i>{{item.hours.weekday_text[0]}}</i></li>
+                          <li><i>{{item.hours.weekday_text[1]}}</i></li>
+                          <li><i>{{item.hours.weekday_text[2]}}</i></li>
+                          <li><i>{{item.hours.weekday_text[3]}}</i></li>
+                          <li><i>{{item.hours.weekday_text[4]}}</i></li>
+                          <li><i>{{item.hours.weekday_text[5]}}</i></li>
+                        </ul>
+                      <p><a target="_blank" href={{item.google_page}}>Google Maps Page</a></p>
+                      <p><a target="_blank" href={{item.website}}>Official Website</a></p>
+                    </div>
+                    <div class="col-md-3">
+                      <p style="text-align: center;"><img src="{{item.icon}}" alt="maps icon"></p>
+                    </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-4">
+      <agm-map id="map" [latitude]='lat' [longitude]='lng' [zoom]=17 >
+        <agm-marker [latitude]="lat" [longitude]="lng" ></agm-marker>
+      </agm-map>
+    </div>
+  </div>
+</div>
